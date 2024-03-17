@@ -17,7 +17,7 @@ def get_data_frame(user_id: int):
 
 
       dataFormated = pd.DataFrame(data, columns = headerMapping.values())
-      dataFormated.sort_values([headerMapping["DT"], headerMapping["Ti"]], ascending=[False, False], inplace=True)
+      dataFormated.sort_values([headerMapping["DT"], headerMapping["Ti"]], ascending=[False, False], inplace=True, ignore_index= True)
       return dataFormated
 
 
